@@ -6,9 +6,9 @@ const PORT = process.env.PORT || 5050;
 app.use(express.json());
 app.use(cors());
 
+const employeesRoutes = require('./routes/employeesRoutes');
 
-
-app.use('/employees', )
+app.use('/employees', employeesRoutes)
 
 app.listen(PORT, () => {
     console.log(`server is using port ${PORT}`)
