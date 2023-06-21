@@ -8,7 +8,7 @@ router
           
 router  
     .route('/:id')
-    .get(employeeController.singleEmployee)
+    // .get(employeeController.singleEmployee)
     .delete(employeeController.deleteEmployee);
 
 
