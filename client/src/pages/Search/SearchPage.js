@@ -1,4 +1,4 @@
-import SearchResultsList from '../../components/SearchResults/SearchResults';
+import SearchResultsList from '../../components/SearchResults/SearchResults.js';
 import './SearchPage.scss';
 
 function Search(props) {
