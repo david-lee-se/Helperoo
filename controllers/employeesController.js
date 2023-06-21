@@ -23,3 +23,15 @@ exports.addEmployee = (req, res) => {
         })
         .catch((err) => res.status(400).send(`Failed creating employee: ${err}`))
 }
+
+exports.deleteEmployee = (req, res) => {
+    knex('employees')
+        .delete()
+        .where({id: req.params.id})
+        .then(() => {
+            res.status(200).send(`Employee has been deleted.`)
+        })
+        .catch((err) => {
+            res.status(400).send(`Error deleting employee ${err}.`)
+        })
+}
