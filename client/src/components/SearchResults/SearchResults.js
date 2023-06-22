@@ -23,7 +23,6 @@ function SearchResultsList() {
         <>
             <ul className='employee-list'>
             {employeesList.map((employee) => {
-                console.log(employee)
                 return (
                     <Link to={`/${employee.id}`} key={employee.id} className='card'>
                         <h2 className='card__name'>{employee.first_name} {employee.last_name}</h2>
