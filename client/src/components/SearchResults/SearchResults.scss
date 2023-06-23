@@ -1,3 +1,9 @@
+.employee-list {
+    margin-top: 4rem;
+    margin-left: 10rem;
+}
+
+
 .card { 
     display: flex;
     align-items: center;
@@ -8,27 +14,24 @@
     color: black;
     background-color: white;
     &:hover {
-        color: blue;
+        color: white;
+        border-color: white;
+        background-image: linear-gradient(to bottom right, rgb(0, 2, 43), rgb(60,60,221));
     }
     &__name {
         padding: 1rem 2rem;
         font-size: 1.25rem;
-        background-color: white;
     }
     &__birthday {
         font-weight: 500;
-        background-color: white;
     }
     &__email {
         padding-left: 2.5rem;
-        background-color: white;
     }
     &__phone {
         padding-left: 2.5rem;
-        background-color: white;
     }
     &__hire-date {
         padding-left: 2.5rem;
-        background-color: white; 
     }
 }

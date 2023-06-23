@@ -1,0 +1,11 @@
+.header {
+    height: 10rem;
+    font-size: 3rem;
+    color: white;
+    background-image: linear-gradient(to bottom right, rgb(0, 2, 43), rgb(60,60,221));
+    &__title {
+        margin: 0;
+        padding-left: 4rem;
+        padding-top: 2rem;
+    }
+}
