@@ -1,3 +1,4 @@
+import Navbar from '../Navbar/Nav';
 import './Header.scss';
 
 function Header() {
@@ -5,7 +6,9 @@ function Header() {
         <>
             <article className='header'>
                 <h1 className='header__title'>Helperoo</h1>
-                
+                <div className='navbar'>
+                <Navbar/>
+                </div>
             </article>
         </>
     )

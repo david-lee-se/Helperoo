@@ -1,6 +1,10 @@
 .employee-list {
     margin-top: 4rem;
     margin-left: 10rem;
+    height: 100%;
+    width: 60vw;
+    border-radius: 20px;
+    background-color: rgb(197, 209, 235);
 }
 
 
@@ -12,7 +16,8 @@
     margin: 1rem;
     text-decoration: none;
     color: black;
-    background-color: white;
+    background-color: rgb(240, 168, 104);
+    border-radius: 20px;
     &:hover {
         color: white;
         border-color: white;
