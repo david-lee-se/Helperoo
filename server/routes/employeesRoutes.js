@@ -4,11 +4,11 @@ const employeeController = require('../controllers/employeesController');
 router
     .route('/')
     .get(employeeController.index)
-    
+    .post(employeeController.addEmployee);
           
 router
-    .route('/')
-    .post(employeeController.addEmployee);
+    .route('/browse')
+    .get(employeeController.getEmployees)
 router  
     .route('/:id')
     .get(employeeController.singleEmployee)

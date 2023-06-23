@@ -1,0 +1,25 @@
+.employee-browse-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+}
+
+.employee-card {
+    width: 20%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    background-color: rgb(240, 168, 104);
+    text-decoration: none;
+    border-radius: 20px;
+    color: rgb(0, 0, 179);
+    &__first-name {
+        font-size: 1.5rem;
+    }
+}

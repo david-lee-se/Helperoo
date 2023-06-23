@@ -41,7 +41,7 @@ function SearchBox(props) {
     return (
         <>
             <fieldset className='search-box'>
-                <h2 className='search-box__title'>Search</h2>
+                <h2 className='search-box__title'>Filter Search</h2>
                 <div className='checkbox__container'>
                     <div>
                     <input 
@@ -103,7 +103,7 @@ function SearchBox(props) {
                     />
                     <label className='checkbox__label' htmlFor='hire-date'>Hire Date</label>
                     </div>
-                    <div className='checkbox__submit'>
+                    <div className='checkbox__button-container'>
                         <button 
                         className='checkbox__submit-button' 
                         type='submit'

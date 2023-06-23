@@ -18,10 +18,22 @@ exports.index = (req, res) => {
             res.status(200).json(data);
         })
         .catch((err) => {
-            res.status(400).send(`request not fulfilled: ${err}`)
+            res.status(400).send(`request not fulfilled: ${err}`);
         })
 }
 
+exports.getEmployees = (_req, res) => {
+    
+    knex.column('id', 'first_name', 'last_name')
+        .select()
+        .from('employees')
+        .then((response) => {
+            res.status(200).json(response);
+        })
+        .catch((err) => {
+            res.status(400).send(`Request not fulfilled: ${err}`);
+        })
+}
 exports.addEmployee = (req, res) => {
     if(!req.body.first_name || !req.body.last_name || !req.body.hire_date || !req.body.date_of_birth || !req.body.phone || !req.body.email) {
         return res.status(400).send('All fields are required!')
