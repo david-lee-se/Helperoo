@@ -1,0 +1,23 @@
+.search-box {
+    height: 20rem;
+    width: 12rem;
+    border: 2px solid black;
+    margin-left: 5rem;
+    &__title {
+        padding: 1rem;
+    }
+}
+
+.checkbox {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+    }
+    &__option {
+        margin-top: .75rem;
+    }
+    &__label {
+        margin-left: .5rem;
+    }
+}

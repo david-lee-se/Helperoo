@@ -1,22 +1,8 @@
-import {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import './SearchResults.scss';
-import axios from 'axios';
 
-function SearchResultsList() {
-    const [employeesList, setEmployeesList] = useState([]);
-
-    useEffect(() => {
-        const getEmployeeList = async () => {
-            try {
-                const employeeListData = await axios.get('http://localhost:8080/employees')
-                setEmployeesList(employeeListData.data)
-            }
-            catch (err) {
-                console.log(err)
-            }}
-            getEmployeeList();
-    }, []);
+function SearchResultsList(props) {
+    let employeesList = props.employeesList;   
 
     
     return (
