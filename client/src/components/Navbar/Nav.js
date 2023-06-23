@@ -5,8 +5,8 @@ function Navbar() {
     return (
         <>
             <div className='navlink'>
-            <NavLink className='navlink__search' to='/'>Search</NavLink>
-            <NavLink className='navlink__browse' to='/browse'>Browse</NavLink>
+            <NavLink className='navlink__search' to='/'>Browse</NavLink>
+            <NavLink className='navlink__browse' to='/search'>Search</NavLink>
             </div>
         </>
     )
