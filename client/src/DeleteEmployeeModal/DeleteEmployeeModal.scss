@@ -1,0 +1,58 @@
+.delete-modal {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 15rem;
+    
+    &__card {
+        width: 60%;
+        height: 15rem;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+    &__text-container {
+        padding-top: 2rem;
+        padding-left: 2rem;
+    }
+    &__title {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    &__body {
+        margin-top: .5rem;
+        font-size: 1.5rem;
+    }
+    &__button-container {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__cancel {
+        width: 5rem;
+        height: 2rem;
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        margin-right: 3rem;
+        &:hover {
+            background-color: blue;
+            color: white;
+        }
+    }
+    &__delete {
+        width: 5rem;
+        height: 2rem;
+        border-radius: 10px;
+        background-color: rgb(153, 0, 0);
+        color: white;
+        font-weight: 600;
+        margin-right: 3rem;
+        &:hover {
+            font-weight: bold;
+            background-color: rgb(255, 0, 0);
+            color: white;
+        }
+    }
+}

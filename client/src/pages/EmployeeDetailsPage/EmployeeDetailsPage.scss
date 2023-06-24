@@ -1,4 +1,9 @@
 .employee-details {
+    &__delete-icon {
+        position: absolute;
+        right: 2rem;
+        top: 3rem;
+    }
     &-card {
         width: 60%;
         height: 20rem;
