@@ -9,9 +9,7 @@ exports.index = (req, res) => {
     req.query.option5? queryArray.push(req.query.option5): '';
     req.query.option6? queryArray.push(req.query.option6): '';
     
-    
     knex.column(queryArray)
-        // .where({firstName: req.params.first_name})
         .select()
         .from('employees')
         .then((data) => {
@@ -22,6 +20,19 @@ exports.index = (req, res) => {
         })
 }
 
+exports.getEmployeeBySearch = (req, res) => {
+
+    console.log(req.query.searchTerm)
+    knex('employees')
+        .select()
+        .where(`${req.query.category}`, 'like', `%${req.query.searchTerm}%`)
+        .then((response) => {
+            res.status(200).json(response)
+        })
+        .catch((err) => {
+            res.status(400).send(`Request not fulfilled: ${err}`)
+        })
+}
 exports.getEmployees = (_req, res) => {
     
     knex.column('id', 'first_name', 'last_name')

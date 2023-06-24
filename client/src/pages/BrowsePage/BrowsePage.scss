@@ -19,7 +19,13 @@
     background-color: rgb(240, 168, 104);
     text-decoration: none;
     border-radius: 20px;
-    color: rgb(0, 0, 179);
+    color: black;
+    border: 2px solid black;
+    &:hover {
+        border-color: white;
+        background-image: linear-gradient(to bottom right, rgb(0, 2, 43), rgb(60,60,221));
+        color: white; 
+    }
     &__first-name {
         font-size: 1.5rem;
     }

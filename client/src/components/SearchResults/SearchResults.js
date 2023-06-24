@@ -8,8 +8,6 @@ function SearchResultsList(props) {
     let setEmployeesList = props.setEmployeesList; 
 
     const handleClick = (e) => {
-        console.log('click')
-        console.log(parseInt(e.currentTarget.value))
         const filteredList = employeesList.filter((employee) => parseInt(employee.id) !== parseInt(e.currentTarget.value));
         setEmployeesList(filteredList);
     }
@@ -17,7 +15,7 @@ function SearchResultsList(props) {
     return (
         <>
             <ul className='employee-list'>
-            {employeesList.map((employee) => {
+            {!employeesList? '': employeesList.map((employee) => {
                 return (
                     <div className='card' key={employee.id}>
                     <Link to={`/employees/${employee.id}`} className='card__link' >

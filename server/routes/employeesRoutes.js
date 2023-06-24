@@ -9,6 +9,10 @@ router
 router
     .route('/browse')
     .get(employeeController.getEmployees)
+
+router 
+    .route('/search')
+    .get(employeeController.getEmployeeBySearch)
 router  
     .route('/:id')
     .get(employeeController.singleEmployee)
