@@ -11,17 +11,26 @@
 .card { 
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 50rem;
     border: 2px solid black;
     margin: 1rem;
-    text-decoration: none;
-    color: black;
     background-color: rgb(240, 168, 104);
     border-radius: 20px;
     &:hover {
         color: white;
         border-color: white;
         background-image: linear-gradient(to bottom right, rgb(0, 2, 43), rgb(60,60,221));
+    }
+    &__link {
+        text-decoration: none;
+        color: black;
+        display: flex;
+        align-items: center;
+    }
+    &__clear-button {
+        position: absolute;
+        right:0 ;
     }
     &__name {
         padding: 1rem 2rem;

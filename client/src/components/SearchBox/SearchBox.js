@@ -23,7 +23,6 @@ function SearchBox(props) {
         }
    
     const handleSubmit = () => {
-        console.log(employeeInfo)
         let option1 = employeeInfo[0]? `option1=${employeeInfo[0]}`:'';
         let option2 = employeeInfo[1]? `option2=${employeeInfo[1]}`:'';
         let option3 = employeeInfo[2]? `option3=${employeeInfo[2]}`:'';

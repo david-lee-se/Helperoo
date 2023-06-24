@@ -1,7 +1,6 @@
 import SearchResultsList from '../../components/SearchResults/SearchResults.js';
 import SearchBox from '../../components/SearchBox/SearchBox.js';
 import { useState } from 'react';
-import Header from '../../components/Header/Header.js';
 import './SearchPage.scss';
 
 function Search(props) {
