@@ -14,7 +14,7 @@ function SearchResultsList(props) {
     
     return (
         <>
-            <ul className='employee-list'>
+            <ul className='employee-list-search'>
             {!employeesList? '': employeesList.map((employee) => {
                 return (
                     <div className='card' key={employee.id}>
