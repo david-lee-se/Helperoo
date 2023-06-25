@@ -9,13 +9,12 @@ function DeleteEmployeeModal({ onClose, employeeId, employeeName}) {
     const onDelete = () => {
         axios.delete(`http://localhost:8080/employees/${employeeId}`)
             .then(response => {
-                alert(`Deleted ${employeeName} from database.`)
+                console.log(`Deleted ${employeeName} from database.`)
             })
             .catch(err => {
                 console.log(err)
             })
-        onClose();
-        navigate('/browse');
+        onClose();;
     }
     return (
         <>
@@ -23,7 +22,7 @@ function DeleteEmployeeModal({ onClose, employeeId, employeeName}) {
             <div className='delete-modal__card'>
                 <div className='delete-modal__text-container'>
                     <h1 className='delete-modal__title'>Delete Employee?</h1>
-                    <p className='delete-modal__body'>Are you sure you want to delete {employeeName}? This cannot be undone.</p>
+                    <p className='delete-modal__body'>Are you sure you want to delete {employeeName}? <strong>This cannot be undone.</strong></p>
                 </div>
                 <div className='delete-modal__button-container'>
                     <button className='delete-modal__cancel' onClick={onClose}>Cancel</button>

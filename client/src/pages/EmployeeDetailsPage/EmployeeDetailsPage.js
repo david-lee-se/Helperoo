@@ -1,6 +1,6 @@
 import { useState, useEffect} from 'react';
 import axios from 'axios';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import {createPortal} from 'react-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import DeleteEmployeeModal from '../../DeleteEmployeeModal/DeleteEmployeeModal';
@@ -11,6 +11,7 @@ function EmployeeDetailsPage() {
     const [singleEmployee, setSingleEmployee] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const {id} = useParams();
+    const navigate = useNavigate();
 
 
     const openModal = (e) => {
@@ -54,7 +55,9 @@ function EmployeeDetailsPage() {
                 </div>
                 {showModal && createPortal(
                     <DeleteEmployeeModal 
-                        onClose={() => setShowModal(false)}
+                        onClose={() => {
+                            setShowModal(false)
+                            navigate('/employees/browse')}}
                         employeeName={singleEmployee.first_name}
                         employeeId = {id}/>,
                     document.body
