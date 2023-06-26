@@ -14,8 +14,8 @@ function App() {
 				<Routes>
 					<Route path="/employees/browse" element={<BrowsePage/>}/>
 					<Route path='/employees/search' element={<Search/>}/>
-					<Route path="/employees/:id" element={<EmployeeDetailsPage/>}/>
 					<Route path='/employees/add' element={<AddEmployeePage/>}/>
+					<Route path='/employees/browse/:id' element={<EmployeeDetailsPage/>}/>
 				</Routes>
       		</BrowserRouter>
     	</div>

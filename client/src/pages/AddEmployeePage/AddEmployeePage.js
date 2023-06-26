@@ -28,7 +28,7 @@ function AddEmployeePage() {
                 setEmployeeModal(true)
             })
             .catch((err) => {
-                console.log(err)
+                console.log(err.response.data)
             })
     }
     const onCancel = () => {

@@ -1,6 +1,5 @@
 .new-employee-card {
     display: flex;
-    // justify-content: center;
     flex-direction: column;
     width: 71%;
     height: 30rem;
@@ -30,12 +29,12 @@
     }
     &__hire-date-container {
         position: absolute;
-        top: 11.1rem;
+        top: 11rem;
         right: 16rem;
     }
     &__phone-container {
         position: absolute;
-        bottom: 8.7rem;
+        bottom: 8.5rem;
         right: 12rem;
     }
     &__button-container {

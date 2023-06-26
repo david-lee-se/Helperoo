@@ -6,11 +6,11 @@ import './SearchPage.scss';
 
 function Search(props) {
     const [employeesList, setEmployeesList]= useState([]);
+    
 
     return (
         <>
             <article>
-                
                 <section className='search-page'>
                     <div className='search-options'>
                     <SearchBox setEmployeesList={setEmployeesList}/>
@@ -19,6 +19,7 @@ function Search(props) {
                     </div>
                     <SearchResultsList employeesList={employeesList} setEmployeesList={setEmployeesList}/>
                 </section>
+                
             </article>
         </>
 )}

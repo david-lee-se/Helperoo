@@ -18,10 +18,10 @@ function SearchResultsList(props) {
             {!employeesList? '': employeesList.map((employee) => {
                 return (
                     <div className='card' key={employee.id}>
-                    <Link to={`/employees/${employee.id}`} className='card__link' >
+                    <Link to={`/employees/browse/${employee.id}`} className='card__link' >
                         <h2 className='card__name'>{employee.first_name} {employee.last_name}</h2>
                         <p className='card__birthday'>{employee.date_of_birth}</p>
-                        <p className='card__email'>{employee.email}</p>
+                        {employee.email? <p className='card__email'>{employee.email}</p>: ''}
                         <p className='card__phone'>{employee.phone}</p>
                         <p className='card__hire-date'>{employee.hire_date}</p>
                     </Link>

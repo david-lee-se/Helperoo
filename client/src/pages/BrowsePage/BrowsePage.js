@@ -23,7 +23,7 @@ function BrowsePage() {
             <ul className='employee-browse-list'>
             {(!employeeData)? '': employeeData.map((employee) => {
                 return (
-                    <Link to={`/employees/${employee.id}`} key={employee.id} className='employee-card'>
+                    <Link to={`/employees/browse/${employee.id}`} key={employee.id} className='employee-card'>
                         <h2 className='employee-card__first-name'>{employee.first_name}  {employee.last_name}</h2>
                     </Link>
                 )

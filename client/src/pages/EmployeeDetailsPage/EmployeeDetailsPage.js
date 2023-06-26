@@ -3,13 +3,18 @@ import axios from 'axios';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import {createPortal} from 'react-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
-import DeleteEmployeeModal from '../../DeleteEmployeeModal/DeleteEmployeeModal';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteEmployeeModal from '../../components/DeleteEmployeeModal/DeleteEmployeeModal';
 import './EmployeeDetailsPage.scss';
+import EditEmployeeModal from '../../components/EditEmployeeModal/EditEmployeeModal';
 
-function EmployeeDetailsPage() {
+
+function EmployeeBrowseDetailsPage() {
 
     const [singleEmployee, setSingleEmployee] = useState([]);
     const [showModal, setShowModal] = useState(false);
+    const [showEditModal, setShowEditModal] = useState(false);
     const {id} = useParams();
     const navigate = useNavigate();
 
@@ -17,6 +22,11 @@ function EmployeeDetailsPage() {
     const openModal = (e) => {
         const employeeId = id
         setShowModal(true);
+    }
+
+    const handleEditClick = (e) => {
+        const employeeId = id
+        setShowEditModal(true);
     }
     useEffect(() => {
         const getEmployeeDetails = async () => {
@@ -33,8 +43,14 @@ function EmployeeDetailsPage() {
     return(
         <>
             <section className='employee-details-card'>
+                <Link to='/employees/browse' className='employee-details__back-icon'>
+                    <ArrowBackIosNewIcon fontSize='large' color='action'>BACK</ArrowBackIosNewIcon>
+                </Link>
                 <Link to='#' onClick={openModal} className='employee-details__delete-icon'>
                     <DeleteIcon fontSize="large" color="action"/>
+                </Link>
+                <Link to='#' onClick={handleEditClick} className='employee-details__edit-icon'>
+                    <EditIcon fontSize='large' color="action"/>
                 </Link>
                 <h2 className='employee-details__name'>{singleEmployee.first_name} {singleEmployee.last_name}</h2>
                 <div className='employee-details__birthday-container'>
@@ -57,14 +73,27 @@ function EmployeeDetailsPage() {
                     <DeleteEmployeeModal 
                         onClose={() => {
                             setShowModal(false)
-                            navigate('/employees/browse')}}
+                            navigate(`/employees/browse/`)}}
                         employeeName={singleEmployee.first_name}
-                        employeeId = {id}/>,
+                        employeeId = {id}
+                        setShowModal = {setShowModal}/>,
                     document.body
                 )}
+                {showEditModal && createPortal(
+                    <EditEmployeeModal
+                        onCancel={() => {
+                            setShowEditModal(false)
+                        }} 
+                        editEmployeeData={singleEmployee}
+                        setSingleEmployee={setSingleEmployee}
+                        id={id}
+                        setShowEditModal={setShowEditModal}/>,
+                    document.body
+                )}
+               
             </section>
         </>
     )
 }
 
-export default EmployeeDetailsPage;
+export default EmployeeBrowseDetailsPage;

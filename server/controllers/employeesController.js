@@ -85,3 +85,21 @@ exports.singleEmployee = (req, res) => {
             res.status(400).send(`Error getting employee details.`)
         })
 }
+
+exports.editEmployee = (req, res) => {
+
+    const updatedEmployee= {...req.body};
+
+    knex('employees')
+        .where({id: req.params.id})
+        .update(updatedEmployee)
+        .then(() => {
+            return knex('employees').where({id: req.params.id});
+        })
+        .then((data) => {
+            res.status(200).json(data[0])
+        })
+        .catch((err) => {
+            res.status(400).send('Error editing employee.')
+        })
+}

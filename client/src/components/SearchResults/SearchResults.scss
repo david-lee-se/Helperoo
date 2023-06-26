@@ -1,8 +1,9 @@
 .employee-list-search{
     margin-top: 4rem;
-    margin-left: 10rem;
+    margin-left: 5rem;
+    padding-right:1rem;
     height: 100%;
-    width: 62.5vw;
+    width: auto;
     border-radius: 20px;
     background-color: rgb(197, 209, 235);
 }
@@ -15,22 +16,18 @@
     width: 96%;
     border: 2px solid black;
     margin: 1rem;
-    background-color: rgb(240, 168, 104);
+    
+    background-image: linear-gradient(to bottom right, rgb(0, 2, 43), rgb(60,60,221));
     border-radius: 20px;
     &:hover {
-        color: white;
         border-color: white;
-        background-image: linear-gradient(to bottom right, rgb(0, 2, 43), rgb(60,60,221));
     }
     &__link {
         text-decoration: none;
         width: 100%;
-        color: black;
+        color: white;
         display: flex;
         align-items: center;
-        &:hover {
-            color: white;
-        }
     }
     &__clear-button {
         position: absolute;
@@ -39,15 +36,18 @@
     &__name {
         padding: 1rem 2rem;
         font-size: 1.25rem;
+        width: 10rem;
     }
     &__birthday {
         font-weight: 500;
     }
     &__email {
-        padding-left: 2.5rem;
+        margin-left: 1rem;
+        width: 13rem;
     }
     &__phone {
         padding-left: 2.5rem;
+        
     }
     &__hire-date {
         padding-left: 2.5rem;
