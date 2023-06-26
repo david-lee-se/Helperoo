@@ -3,11 +3,14 @@ import { useNavigate } from 'react-router';
 import {createPortal} from 'react-dom';
 import axios from 'axios';
 import './AddEmployeePage.scss';
+import ErrorModal from '../../components/ErrorModal/ErrorModal';
 import NewEmployeeModal from '../../components/NewEmployeeModal/NewEmployeeModal';
 
-function AddEmployeePage() {
+function AddEmployeePage({alertModal, setAlertModal, alertMessage, setAlertMessage}) {
     const [newEmployee, setNewEmployee] = useState({});
     const [ EmployeeModal, setEmployeeModal] = useState(false);
+    const [errorMessage, setErrorMessage] = useState();
+    const [errorModal, setErrorModal] = useState(false);
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -28,7 +31,8 @@ function AddEmployeePage() {
                 setEmployeeModal(true)
             })
             .catch((err) => {
-                console.log(err.response.data)
+                setErrorMessage(err.response.data)
+                setErrorModal(true)
             })
     }
     const onCancel = () => {
@@ -120,6 +124,14 @@ function AddEmployeePage() {
                     employeeData={newEmployee}/>,
                 document.body
             )}
+            {errorModal && createPortal(
+                    <ErrorModal 
+                        onOk={() => {
+                            setErrorModal(false)
+                        }}
+                        errorMessage={errorMessage}/>,
+                    document.body
+                )}
         </section>
         </>
     )

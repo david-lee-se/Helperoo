@@ -10,7 +10,7 @@ import './EmployeeDetailsPage.scss';
 import EditEmployeeModal from '../../components/EditEmployeeModal/EditEmployeeModal';
 
 
-function EmployeeBrowseDetailsPage() {
+function EmployeeBrowseDetailsPage({alertModal, setAlertModal, alertMessage, setAlertMessage}) {
 
     const [singleEmployee, setSingleEmployee] = useState([]);
     const [showModal, setShowModal] = useState(false);
@@ -76,7 +76,11 @@ function EmployeeBrowseDetailsPage() {
                             navigate(`/employees/browse/`)}}
                         employeeName={singleEmployee.first_name}
                         employeeId = {id}
-                        setShowModal = {setShowModal}/>,
+                        setShowModal = {setShowModal}
+                        alertModal={alertModal}
+						setAlertModal={setAlertModal}
+						alertMessage={alertMessage}
+						setAlertMessage={setAlertMessage}/>,
                     document.body
                 )}
                 {showEditModal && createPortal(

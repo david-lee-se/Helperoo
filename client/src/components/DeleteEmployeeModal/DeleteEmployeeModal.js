@@ -5,10 +5,18 @@ import { useNavigate } from 'react-router';
 import './DeleteEmployeeModal.scss';
 import { useState } from 'react';
 
-function DeleteEmployeeModal({ onClose, employeeId, employeeName, setShowModal}) {
+function DeleteEmployeeModal(
+            {  
+                employeeId, 
+                employeeName, 
+                setShowModal, 
+                setAlertMessage, 
+                alertMessage, 
+                alertModal, 
+                setAlertModal
+            }) {
 
-    const [alertModal, setAlertModal] = useState(false);
-    const [alertMessage, setAlertMessage] = useState('');
+
     const navigate= useNavigate();
 
     const onDelete = () => {
@@ -16,6 +24,7 @@ function DeleteEmployeeModal({ onClose, employeeId, employeeName, setShowModal})
             .then(response => {
                 setAlertMessage(`Deleted ${employeeName} from database.`)
                 setAlertModal(true)
+                navigate('/employees/browse')
             })
             .catch(err => {
                 console.log(err)

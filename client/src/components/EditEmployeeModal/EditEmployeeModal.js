@@ -13,14 +13,7 @@ function EditEmployeeModal({id, onCancel, editEmployeeData, setShowEditModal, se
         hire_date: editEmployeeData.hire_date,
         date_of_birth: editEmployeeData.date_of_birth
     });
-    const [updatedEmployee, setUpdatedEmployee] = useState({
-        first_name: '',
-        last_name: '',
-        date_of_birth: '',
-        phone: '',
-        email: '',
-        hire_date: ''
-    });
+    const [updatedEmployee, setUpdatedEmployee] = useState({});
 
     const firstNameInputRef = useRef();
     const lastNameInputRef = useRef();
@@ -72,13 +65,16 @@ function EditEmployeeModal({id, onCancel, editEmployeeData, setShowEditModal, se
     
     const handleEdit = (e) => {
         e.preventDefault();
+        if(!updatedEmployee) {
+            navigate(`/employees/browse/${id}`)
+        } else{
         const data = {...updatedEmployee, id};
         axios.put(`http://localhost:8080/employees/${id}`, data)
             .then((response) => {
                     setSingleEmployee(response.data)})
             .catch((err) => {
                 console.log(err)
-            })   
+            })}  
         setShowEditModal(false);
     }
 
