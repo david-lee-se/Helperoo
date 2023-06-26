@@ -31,7 +31,7 @@ function App() {
 						}
 					/>
 					<Route 
-						path='/employees/browse/:id' 
+						path='/employees/:id' 
 						element={
 							<EmployeeDetailsPage
 								alertModal={alertModal}

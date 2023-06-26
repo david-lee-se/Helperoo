@@ -66,7 +66,7 @@ function EditEmployeeModal({id, onCancel, editEmployeeData, setShowEditModal, se
     const handleEdit = (e) => {
         e.preventDefault();
         if(!updatedEmployee) {
-            navigate(`/employees/browse/${id}`)
+            navigate(`/employees/${id}`)
         } else{
         const data = {...updatedEmployee, id};
         axios.put(`http://localhost:8080/employees/${id}`, data)

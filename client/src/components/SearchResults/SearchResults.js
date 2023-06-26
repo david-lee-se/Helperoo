@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 import ClearIcon from '@mui/icons-material/Clear';
 import Button from '@mui/material/Button';
+import {red} from '@mui/material/colors';
 import './SearchResults.scss';
 
 function SearchResultsList(props) {
@@ -18,7 +19,7 @@ function SearchResultsList(props) {
             {!employeesList? '': employeesList.map((employee) => {
                 return (
                     <div className='card' key={employee.id}>
-                    <Link to={`/employees/browse/${employee.id}`} className='card__link' >
+                    <Link to={`/employees/${employee.id}`} className='card__link' >
                         <h2 className='card__name'>{employee.first_name} {employee.last_name}</h2>
                         <p className='card__birthday'>{employee.date_of_birth}</p>
                         {employee.email? <p className='card__email'>{employee.email}</p>: ''}
@@ -26,7 +27,7 @@ function SearchResultsList(props) {
                         <p className='card__hire-date'>{employee.hire_date}</p>
                     </Link>
                     <Button variant="text" value={employee.id} className='card__clear-button' onClick={handleClick}>
-                        <ClearIcon/>
+                        <ClearIcon sx={{color: red[500]}}/>
                     </Button>
                     </div>
                 )

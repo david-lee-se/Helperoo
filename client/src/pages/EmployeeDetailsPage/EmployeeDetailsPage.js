@@ -5,6 +5,7 @@ import {createPortal} from 'react-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import EditIcon from '@mui/icons-material/Edit';
+import {lightBlue} from '@mui/material/colors';
 import DeleteEmployeeModal from '../../components/DeleteEmployeeModal/DeleteEmployeeModal';
 import './EmployeeDetailsPage.scss';
 import EditEmployeeModal from '../../components/EditEmployeeModal/EditEmployeeModal';
@@ -44,13 +45,13 @@ function EmployeeBrowseDetailsPage({alertModal, setAlertModal, alertMessage, set
         <>
             <section className='employee-details-card'>
                 <Link to='/employees/browse' className='employee-details__back-icon'>
-                    <ArrowBackIosNewIcon fontSize='large' color='action'>BACK</ArrowBackIosNewIcon>
+                    <ArrowBackIosNewIcon fontSize='large' sx={{color: lightBlue[500]}}>BACK</ArrowBackIosNewIcon>
                 </Link>
                 <Link to='#' onClick={openModal} className='employee-details__delete-icon'>
-                    <DeleteIcon fontSize="large" color="action"/>
+                    <DeleteIcon fontSize="large" color="error"/>
                 </Link>
                 <Link to='#' onClick={handleEditClick} className='employee-details__edit-icon'>
-                    <EditIcon fontSize='large' color="action"/>
+                    <EditIcon fontSize='large' sx={{color: lightBlue[500]}}/>
                 </Link>
                 <h2 className='employee-details__name'>{singleEmployee.first_name} {singleEmployee.last_name}</h2>
                 <div className='employee-details__birthday-container'>
@@ -73,7 +74,7 @@ function EmployeeBrowseDetailsPage({alertModal, setAlertModal, alertMessage, set
                     <DeleteEmployeeModal 
                         onClose={() => {
                             setShowModal(false)
-                            navigate(`/employees/browse/`)}}
+                            navigate(`/employees/browse`)}}
                         employeeName={singleEmployee.first_name}
                         employeeId = {id}
                         setShowModal = {setShowModal}

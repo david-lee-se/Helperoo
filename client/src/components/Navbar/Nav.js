@@ -2,12 +2,14 @@ import './Nav.scss';
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
+
+    
     return (
         <>
             <div className='navlink'>
-            <NavLink className='navlink__browse navlink__browse--active' to='/employees/browse'>Browse</NavLink>
-            <NavLink className='navlink__search navlink__search--active' to='/employees/search'>Search</NavLink>
-            <NavLink className='navlink__add navlink__add--active' to='/employees/add'>Add</NavLink>
+            <NavLink className={({isActive}) => (isActive)? 'navlink__browse navlink__browse--selected': 'navlink__browse'} to='/employees/browse'>Browse</NavLink>
+            <NavLink className={({isActive}) => (isActive)? 'navlink__search navlink__search--selected': 'navlink__search'} to='/employees/search'>Search</NavLink>
+            <NavLink className={({isActive}) => (isActive)? 'navlink__add navlink__add--selected': 'navlink__add'} to='/employees/add'>Add</NavLink>
             </div>
         </>
     )
