@@ -44,7 +44,7 @@ function EmployeeBrowseDetailsPage({alertModal, setAlertModal, alertMessage, set
     return(
         <>
             <section className='employee-details-card'>
-                <Link to='/employees/browse' className='employee-details__back-icon'>
+                <Link to='/' className='employee-details__back-icon'>
                     <ArrowBackIosNewIcon fontSize='large' sx={{color: lightBlue[500]}}>BACK</ArrowBackIosNewIcon>
                 </Link>
                 <Link to='#' onClick={openModal} className='employee-details__delete-icon'>

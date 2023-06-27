@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import folder from '../../assets/images/folder-g.png';
 import './BrowsePage.scss';
 
 function BrowsePage() {
@@ -24,7 +25,9 @@ function BrowsePage() {
             {(!employeeData)? '': employeeData.map((employee) => {
                 return (
                     <Link to={`/employees/${employee.id}`} key={employee.id} className='employee-card'>
+                        {/* <img src={folder} className='employee-card__folder' alt='file-folder'/> */}
                         <h2 className='employee-card__first-name'>{employee.first_name}  {employee.last_name}</h2>
+                       
                     </Link>
                 )
             })}
