@@ -1,3 +1,7 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
 .employee-browse-list {
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +14,7 @@
 }
 
 .employee-card {
-    width: 15%;
+    width: 40%;
     height: 10rem;
     display: flex;
     justify-content: center;
@@ -20,19 +24,27 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
-    // background-image: linear-gradient(to bottom right, rgb(0, 2, 43), rgb(60,60,221));
     text-decoration: none;
-    // border-radius: 20px;
     color: black; 
-    // border: 2px solid black;
+        @include tablet {
+            width: 15%;
+            height: 10rem;
+        }
     &:hover {
         border: 2px solid black;
-        
-        
     }
     &__first-name {
-        font-size: 1.4rem;
-        padding-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1.5rem;
+        padding-top: 1rem;
+        width: 70%;
+        font-size: .875rem;
+        @include tablet {
+            font-size: 1.4rem;
+            padding-top: 1.5rem;
+        }
     }
     &__folder {
         width: 12rem;

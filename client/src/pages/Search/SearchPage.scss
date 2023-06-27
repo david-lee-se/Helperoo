@@ -1,5 +1,17 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
 .search-page {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablet {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    @include desktop {
+        padding-left: 15rem;
+    }
 }
 
 .search-options {

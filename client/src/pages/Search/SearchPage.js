@@ -10,7 +10,7 @@ function Search(props) {
 
     return (
         <>
-            <article>
+            <article className='search-page-container'>
                 <section className='search-page'>
                     <div className='search-options'>
                     <SearchBox setEmployeesList={setEmployeesList}/>

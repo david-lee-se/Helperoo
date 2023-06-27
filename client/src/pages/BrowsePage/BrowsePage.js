@@ -25,9 +25,7 @@ function BrowsePage() {
             {(!employeeData)? '': employeeData.map((employee) => {
                 return (
                     <Link to={`/employees/${employee.id}`} key={employee.id} className='employee-card'>
-                        {/* <img src={folder} className='employee-card__folder' alt='file-folder'/> */}
                         <h2 className='employee-card__first-name'>{employee.first_name}  {employee.last_name}</h2>
-                       
                     </Link>
                 )
             })}

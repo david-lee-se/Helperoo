@@ -1,7 +1,16 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
 .add-employee {
+
+    display: flex;
+    justify-content: center;
     &-container {
     display: flex;
     justify-content: center;
+    @include desktop {
+        width: 90%;
+    }
     }
     &-form {
         width: 70%;

@@ -1,15 +1,22 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
 .header {
-    height: 10rem;
-    
     color: white;
     background-image:linear-gradient(to bottom right, rgb(0, 2, 43), rgb(60,60,221));
-
+        @include tablet {
+        height: 10rem;
+        }
     &__title {
-        
+        font-size: 3rem;
+        padding-left: 1.5rem;
+        padding-top: 1.5rem;
+        @include tablet {
         margin: 0;
         font-size: 4rem;
         padding-left: 4rem;
         padding-top: 2rem;
+        }
     }
 }
 .navbar {

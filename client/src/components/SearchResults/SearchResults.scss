@@ -1,11 +1,16 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
 .employee-list-search{
-    margin-top: 4rem;
-    margin-left: 5rem;
-    padding-right:1rem;
-    height: 100%;
-    width: auto;
     border-radius: 20px;
     background-color: rgb(197, 209, 235);
+    @include tablet {
+        margin-top: 4rem;
+        margin-left: 5rem;
+        padding-right:1rem;
+        height: 100%;
+        width: auto;
+    }
 }
 
 
@@ -13,21 +18,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 96%;
+    width: 80%;
     border: 2px solid black;
     margin: 1rem;
-    
     background-image: linear-gradient(to bottom right, rgb(0, 2, 43), rgb(60,60,221));
     border-radius: 20px;
+    @include tablet {
+        width: 98%;
+    }
     &:hover {
         border-color: white;
     }
     &__link {
         text-decoration: none;
-        width: 100%;
         color: white;
         display: flex;
         align-items: center;
+        @include tablet {
+            width: 100%;
+        } 
     }
     &__clear-button {
         position: absolute;

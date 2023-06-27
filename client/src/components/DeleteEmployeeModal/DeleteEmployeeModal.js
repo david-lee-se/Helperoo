@@ -50,7 +50,7 @@ function DeleteEmployeeModal(
                     <AlertModal 
                         onClose={() => {
                             setAlertModal(false)
-                            navigate('/employees/browse')
+                            navigate('/')
                         }}
                         alertMessage={alertMessage}/>,
                     document.body

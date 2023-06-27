@@ -42,6 +42,7 @@ function AddEmployeePage({alertModal, setAlertModal, alertMessage, setAlertMessa
 
     return (
         <>
+        <article className='add-employee'>
         <section className='add-employee-container'>
             <form className='add-employee-form' onSubmit={handleSubmit}>
                 <h1 className='add-employee__title'>Add New Employee</h1>
@@ -120,7 +121,7 @@ function AddEmployeePage({alertModal, setAlertModal, alertMessage, setAlertMessa
                 <NewEmployeeModal
                     onClose={()=>{
                         setEmployeeModal(false)
-                        navigate('/employees/browse')}}
+                        navigate('/')}}
                     employeeData={newEmployee}/>,
                 document.body
             )}
@@ -133,6 +134,7 @@ function AddEmployeePage({alertModal, setAlertModal, alertMessage, setAlertMessa
                     document.body
                 )}
         </section>
+        </article>
         </>
     )
 }
