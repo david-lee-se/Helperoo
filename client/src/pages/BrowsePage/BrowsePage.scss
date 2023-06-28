@@ -32,7 +32,11 @@
             margin: .5rem;
             width: 20%;
             height: 10rem;
-            
+        }
+        @include desktop {
+            width: 15%;
+            margin: 1rem .5rem;
+            height: 12rem;
         }
     &:hover {
         background-color: blue;
