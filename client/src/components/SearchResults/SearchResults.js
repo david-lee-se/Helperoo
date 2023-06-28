@@ -20,11 +20,14 @@ function SearchResultsList(props) {
                 return (
                     <div className='card' key={employee.id}>
                     <Link to={`/employees/${employee.id}`} className='card__link' >
+                        
                         <h2 className='card__name'>{employee.first_name} {employee.last_name}</h2>
-                        <p className='card__birthday'>{employee.date_of_birth}</p>
-                        {employee.email? <p className='card__email'>{employee.email}</p>: ''}
-                        <p className='card__phone'>{employee.phone}</p>
-                        <p className='card__hire-date'>{employee.hire_date}</p>
+                        <div className='card-details'>
+                            {employee.date_of_birth? <p className='card__birthday'>{employee.date_of_birth}</p>: ''}
+                            {employee.email? <p className='card__email'>{employee.email}</p>: ''}
+                            {employee.phone? <p className='card__phone'>{employee.phone}</p>: ''}
+                            {employee.hire_date? <p className='card__hire-date'>{employee.hire_date}</p>: ''}
+                        </div>
                     </Link>
                     <Button variant="text" value={employee.id} className='card__clear-button' onClick={handleClick}>
                         <ClearIcon sx={{color: red[500]}}/>

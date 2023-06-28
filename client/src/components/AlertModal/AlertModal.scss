@@ -1,21 +1,47 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+
 .alert-modal {
-    height: 15rem;
-    width: 60%;
-    bottom: 30rem;
     position: relative;
-    left: 24rem;
+    width: 70%;
+    bottom: 35rem;
+    height: 20rem;
+    left: 3rem;
     background-color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
     border-radius: 20px;
     border: 2px solid black;
+    padding:1rem;
+    @include tablet {
+        bottom: 30.5rem;
+        left: 7.7rem;
+        justify-content: center;
+        max-width: 42rem;
+    }
+    @include desktop {
+        height: 20rem;
+        bottom: 30rem;
+        left: 24rem;
+        width: 50%;
+        max-width: 80rem;
+    }
     &__text {
-        font-size: 2rem;
+        display: flex;
+        justify-self: center;
+        font-size: 2.5rem;
         padding-bottom: 2rem;
         color: red;
+        @include tablet {
+            font-size: 2rem;
+        }
+        @include desktop {
+
+        }
     }
-    &__ok {
+   
+    &__ok-button {
         width: 5rem;
         height: 2rem;
         margin-right: 2rem;
@@ -24,12 +50,16 @@
         color: rgb(0, 0, 153);
         font-weight: 600;
         position: absolute;
-        bottom: 4rem;
-        right: 5rem;
+        bottom: 2rem;
+        right: 2rem;
         &:hover {
             font-weight: bold;
             background-color: black;
             color: white;
+        }
+        @include desktop {
+            bottom: 4rem;
+            right: 5rem;
         }
     }
 }

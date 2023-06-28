@@ -113,8 +113,8 @@ function AddEmployeePage({alertModal, setAlertModal, alertMessage, setAlertMessa
                     </div>
                 </div>
                 <div className='add-employee__button-container'>
-                    <button className='add-employee__cancel-button' onClick={onCancel}>Cancel</button> 
                     <button type='submit' className='add-employee__submit-button'>Submit</button>
+                    <button className='add-employee__cancel-button' onClick={onCancel}>Cancel</button> 
                 </div>
             </form>
             {EmployeeModal && createPortal(

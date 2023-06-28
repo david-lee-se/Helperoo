@@ -7,7 +7,7 @@ function AlertModal({alertMessage, onClose}) {
         <>
             <section className='alert-modal'>
                 <h1 className='alert-modal__text'>{alertMessage}</h1>
-                <button className='alert-modal__ok' onClick={onClose}>OK</button>
+                <button className='alert-modal__ok-button' onClick={onClose}>OK</button>
             </section>
         </>
     )

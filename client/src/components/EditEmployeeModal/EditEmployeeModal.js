@@ -108,7 +108,7 @@ function EditEmployeeModal({id, onCancel, editEmployeeData, setShowEditModal, se
     
     return (
         
-            <section className='edit-employee-container'>
+            <section className='edit-employee'>
             <form className='edit-employee-form'>
                 <h1 className='edit-employee__title'>Edit Employee</h1>
                 <div className='text-container'>
@@ -172,8 +172,9 @@ function EditEmployeeModal({id, onCancel, editEmployeeData, setShowEditModal, se
                     </div>
                 </div>
                 <div className='edit-employee__button-container'>
-                    <button className='edit-employee__cancel-button' onClick={onCancel}>Cancel</button> 
                     <button type='submit' onClick={handleEdit}className='edit-employee__submit-button'>Submit</button>
+                    <button className='edit-employee__cancel-button' onClick={onCancel}>Cancel</button> 
+                    
                 </div>
             </form>
         </section>

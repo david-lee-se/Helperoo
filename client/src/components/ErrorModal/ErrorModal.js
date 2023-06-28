@@ -7,7 +7,7 @@ function ErrorModal({errorMessage, onOk}) {
         <>
             <section className='alert-modal'>
                 <h1 className='alert-modal__text'>{errorMessage}</h1>
-                <button className='alert-modal__ok' onClick={onOk}>OK</button>
+                <button className='alert-modal__ok-button' onClick={onOk}>OK</button>
             </section>
         </>
     )
