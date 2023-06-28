@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import folder from '../../assets/images/folder-g.png';
 import './BrowsePage.scss';
 
 function BrowsePage() {
