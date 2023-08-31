@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/helperoo/static/css/main.7f2e7bd7.css",
+    "main.js": "/helperoo/static/js/main.6a3dadb2.js",
+    "index.html": "/helperoo/index.html",
+    "main.7f2e7bd7.css.map": "/helperoo/static/css/main.7f2e7bd7.css.map",
+    "main.6a3dadb2.js.map": "/helperoo/static/js/main.6a3dadb2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f2e7bd7.css",
+    "static/js/main.6a3dadb2.js"
+  ]
+}
