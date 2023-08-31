@@ -1,0 +1,190 @@
+.add-employee {
+  display: flex;
+  justify-content: center;
+}
+.add-employee-container {
+  display: flex;
+  justify-content: center;
+  width: 17rem;
+}
+@media (min-width: 768px) {
+  .add-employee-container {
+    width: 80%;
+  }
+}
+@media (min-width: 1280px) {
+  .add-employee-container {
+    width: 90%;
+  }
+}
+.add-employee-form {
+  height: auto;
+  margin-top: 3rem;
+  color: white;
+  background-image: linear-gradient(to bottom right, rgb(0, 2, 43), rgb(60, 60, 221));
+  border-radius: 20px;
+  box-shadow: 0px 1px 3px black;
+}
+@media (min-width: 768px) {
+  .add-employee-form {
+    padding: 2rem 5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .add-employee-form {
+    padding: 2rem 0;
+    width: 60%;
+  }
+}
+.add-employee__title {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .add-employee__title {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .add-employee__title {
+    padding-left: 3rem;
+  }
+}
+.add-employee__label {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2rem;
+}
+@media (min-width: 768px) {
+  .add-employee__label {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+.add-employee__input {
+  height: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 12rem;
+  margin-top: 0.25rem;
+  padding-left: 0.5rem;
+}
+@media (min-width: 768px) {
+  .add-employee__input {
+    height: 1.5rem;
+  }
+}
+.add-employee__first-name-container {
+  width: 12rem;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.add-employee__last-name-container {
+  width: 12rem;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.add-employee__birth-date-container {
+  width: 12rem;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.add-employee__phone-container {
+  width: 12rem;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.add-employee__email-container {
+  width: 12rem;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.add-employee__hire-date-container {
+  width: 12rem;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.add-employee__submit-button {
+  width: 100%;
+  height: 2rem;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(2, 2, 71);
+  font-weight: 600;
+}
+.add-employee__submit-button:hover {
+  font-weight: bold;
+  background-color: rgb(12, 12, 238);
+}
+@media (min-width: 1280px) {
+  .add-employee__submit-button {
+    width: 5rem;
+  }
+}
+.add-employee__cancel-button {
+  width: 100%;
+  height: 2rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  background-color: white;
+  color: rgb(0, 0, 153);
+  font-weight: 600;
+}
+.add-employee__cancel-button:hover {
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+@media (min-width: 1280px) {
+  .add-employee__cancel-button {
+    width: 5rem;
+    position: absolute;
+    right: 10rem;
+    bottom: 0;
+  }
+}
+.add-employee__button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+  margin: 2rem 0;
+}
+@media (min-width: 1280px) {
+  .add-employee__button-container {
+    flex-direction: row;
+    position: relative;
+    justify-content: flex-end;
+    margin: 4rem 5rem 2rem 0;
+    padding: 0;
+  }
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 17rem;
+  padding-left: 2rem;
+}
+@media (min-width: 768px) {
+  .text-container {
+    flex-direction: row;
+    width: 100%;
+    padding-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  .text-container-1 {
+    margin-right: 18vw;
+  }
+}/*# sourceMappingURL=AddEmployeePage.css.map */

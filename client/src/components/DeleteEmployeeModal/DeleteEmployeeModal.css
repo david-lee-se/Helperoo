@@ -1,0 +1,57 @@
+.delete-modal {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 15rem;
+}
+.delete-modal__card {
+  width: 60%;
+  height: 15rem;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+.delete-modal__text-container {
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+.delete-modal__title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.delete-modal__body {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+.delete-modal__button-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.delete-modal__cancel {
+  width: 5rem;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  margin-right: 3rem;
+}
+.delete-modal__cancel:hover {
+  background-color: blue;
+  color: white;
+}
+.delete-modal__delete {
+  width: 5rem;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgb(153, 0, 0);
+  color: white;
+  font-weight: 600;
+  margin-right: 3rem;
+}
+.delete-modal__delete:hover {
+  font-weight: bold;
+  background-color: rgb(255, 0, 0);
+  color: white;
+}/*# sourceMappingURL=DeleteEmployeeModal.css.map */

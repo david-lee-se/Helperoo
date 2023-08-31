@@ -1,0 +1,28 @@
+.header {
+  color: white;
+  background-image: linear-gradient(to bottom right, rgb(0, 2, 43), rgb(60, 60, 221));
+}
+@media (min-width: 768px) {
+  .header {
+    height: 10rem;
+  }
+}
+.header__title {
+  font-size: 3rem;
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .header__title {
+    margin: 0;
+    font-size: 4rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=Header.css.map */

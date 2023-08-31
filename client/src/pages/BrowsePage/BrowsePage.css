@@ -1,0 +1,62 @@
+.employee-browse-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+  background-color: rgb(197, 209, 235);
+}
+
+.employee-card {
+  width: 7.2rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  background-image: url("../../assets/images/folder-g.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  text-decoration: none;
+  color: black;
+}
+@media (min-width: 768px) {
+  .employee-card {
+    margin: 0.5rem;
+    width: 20%;
+    height: 10rem;
+  }
+}
+@media (min-width: 1280px) {
+  .employee-card {
+    width: 15%;
+    margin: 1rem 0.5rem;
+    height: 12rem;
+  }
+}
+.employee-card:hover {
+  background-color: blue;
+}
+.employee-card__first-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
+  padding-top: 1rem;
+  width: 5rem;
+  font-size: 0.875rem;
+}
+@media (min-width: 768px) {
+  .employee-card__first-name {
+    font-size: 1.4rem;
+    padding-top: 1.5rem;
+  }
+}
+.employee-card__folder {
+  width: 12rem;
+}/*# sourceMappingURL=BrowsePage.css.map */

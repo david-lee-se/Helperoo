@@ -1,0 +1,80 @@
+.navlink {
+  height: 2.7rem;
+  display: flex;
+  align-items: flex-end;
+}
+.navlink__search {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  width: 5rem;
+  justify-self: center;
+  padding-left: 0.5rem;
+  border-radius: 10px;
+}
+.navlink__search:hover {
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+.navlink__search--selected {
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+@media (min-width: 768px) {
+  .navlink__search {
+    font-size: 1.25rem;
+  }
+}
+.navlink__browse {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  width: 5rem;
+  justify-self: center;
+  padding-left: 0.5rem;
+  border-radius: 10px;
+}
+.navlink__browse:hover {
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+.navlink__browse--selected {
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+@media (min-width: 768px) {
+  .navlink__browse {
+    font-size: 1.25rem;
+  }
+}
+.navlink__add {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  width: auto;
+  justify-self: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 10px;
+}
+.navlink__add:hover {
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+.navlink__add--selected {
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+@media (min-width: 768px) {
+  .navlink__add {
+    font-size: 1.25rem;
+  }
+}/*# sourceMappingURL=Nav.css.map */

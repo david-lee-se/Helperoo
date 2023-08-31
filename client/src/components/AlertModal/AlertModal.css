@@ -1,0 +1,65 @@
+.alert-modal {
+  position: relative;
+  width: 70%;
+  bottom: 35rem;
+  height: 20rem;
+  left: 3rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid black;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .alert-modal {
+    bottom: 30.5rem;
+    left: 7.7rem;
+    justify-content: center;
+    max-width: 42rem;
+  }
+}
+@media (min-width: 1280px) {
+  .alert-modal {
+    height: 20rem;
+    bottom: 30rem;
+    left: 24rem;
+    width: 50%;
+    max-width: 80rem;
+  }
+}
+.alert-modal__text {
+  display: flex;
+  justify-self: center;
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+  color: red;
+}
+@media (min-width: 768px) {
+  .alert-modal__text {
+    font-size: 2rem;
+  }
+}
+.alert-modal__ok-button {
+  width: 5rem;
+  height: 2rem;
+  margin-right: 2rem;
+  border-radius: 10px;
+  background-color: white;
+  color: rgb(0, 0, 153);
+  font-weight: 600;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+.alert-modal__ok-button:hover {
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+@media (min-width: 1280px) {
+  .alert-modal__ok-button {
+    bottom: 4rem;
+    right: 5rem;
+  }
+}/*# sourceMappingURL=AlertModal.css.map */
