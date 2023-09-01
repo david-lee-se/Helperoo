@@ -27,7 +27,6 @@ function AddEmployeePage({alertModal, setAlertModal, alertMessage, setAlertMessa
         e.preventDefault();
         axios.post('http://localhost:8080/employees', newEmployee)
             .then((response) => {
-                console.log(response.config.data)
                 setEmployeeModal(true)
             })
             .catch((err) => {
