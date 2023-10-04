@@ -18,7 +18,6 @@ function SearchBar(props) {
         const formEl= formRef.current;
         const categoryQuery = `category=${category}`;
         const searchTerm= `searchTerm=${formEl.search.value}`;
-        console.log(searchTerm)
         axios.get(`http://localhost:8080/employees/search?${categoryQuery}&${searchTerm}`)
             .then((res) => {
                 setEmployeesList(res.data)

@@ -35,7 +35,7 @@ function AddEmployeePage({alertModal, setAlertModal, alertMessage, setAlertMessa
             })
     }
     const onCancel = () => {
-        navigate('/employees/browse')
+        navigate('/')
     }
     
 
