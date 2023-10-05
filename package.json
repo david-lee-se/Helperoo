@@ -1,6 +1,5 @@
 {
-  "homepage": "http://david-lee-se.com/helperoo",
-  "name": "client",
+  "name": "helperoo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
